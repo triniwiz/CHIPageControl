@@ -123,7 +123,7 @@ import UIKit
         self.animate()
     }
     
-    open func set(progress: Int, animated: Bool) {
+    @objc open func set(progress: Int, animated: Bool) {
         guard progress <= numberOfPages - 1 && progress >= 0 else { return }
         if animated == true {
             self.moveToProgress = Double(progress)
